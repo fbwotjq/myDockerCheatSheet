@@ -11,7 +11,7 @@ $ docker version
 $ docker info
 ```
 
-도커 컨테이너 목록 확인:
+도커 정지중인 컨테이너 목록 확인:
 ```sh
 $ docker ps -a
 ```
@@ -27,4 +27,10 @@ $ docker login [도커헙주소 ex> hub.docker.com]
 도커헙로그아웃: 다른 도커헙을 이용하기 위해서 로그아웃이 필요할 때가 있다.
 ```sh
 $ docker logout [도커헙주소 ex> hub.docker.com]
+```
+
+#### 도커 이미지 관련 명령어
+도커이미지생성: 지정한 태그명으로 이미지를 생성한다.
+```sh
+$ docker build -t [테그명] .
 ```
