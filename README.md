@@ -34,3 +34,8 @@ $ docker logout [도커헙주소 ex> hub.docker.com]
 ```sh
 $ docker build -t [테그명] .
 ```
+도커이미지실행: 지정한 태그명으로 이미지를 생성한다.
+```sh
+$ docker run [테그명]
+$ docker run -p 8081:8080 [테그명] => 현재 로컬에 8081로 들어오는 요청을 이미지의 8080포트로 맵핑
+```
