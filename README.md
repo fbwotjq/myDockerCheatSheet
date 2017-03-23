@@ -15,18 +15,31 @@ $ docker info
 ```sh
 $ docker ps -a
 ```
+
 도커 이미지 목록 확인:
 ```sh
 $ docker images
 ```
+
 #### 도커헙 관련 명령어
 도커헙로그인: 이미지를 도커헙에 푸시 하기 위해서 로그인 해줘야 한다.
 ```sh
 $ docker login [도커헙주소 ex> hub.docker.com]
 ```
+
 도커헙로그아웃: 다른 도커헙을 이용하기 위해서 로그아웃이 필요할 때가 있다.
 ```sh
 $ docker logout [도커헙주소 ex> hub.docker.com]
+```
+
+도커 이미지 태그: 도커헙에 올리기 위해서 태깅한다.
+```sh
+$ docker tag [빌드할떄 태그명] [도커헙주소 ex> hub.docker.com]/[계정]/[저장소관련주소]:[테그]
+```
+
+도커헙에 이미지 업로드: 다른 사람들과 이미지 공유를 위해 도커헙에 올린다.
+```sh
+$ docker push [도커헙주소 ex> hub.docker.com]/[계정및저장소관련주소]:[테그]
 ```
 
 #### 도커 이미지 관련 명령어
@@ -34,6 +47,7 @@ $ docker logout [도커헙주소 ex> hub.docker.com]
 ```sh
 $ docker build -t [테그명] .
 ```
+
 도커이미지실행: 지정한 태그명으로 이미지를 생성한다.
 ```sh
 $ docker run [테그명]
